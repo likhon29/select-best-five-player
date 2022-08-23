@@ -79,27 +79,42 @@ function budgetCalculator(noOfPlayers) {
     // player expenses
     document.getElementById('btn-Cal').addEventListener('click', function () {
         const playerPrizeField = document.getElementById('player-prize');
-        const playerPrizeString = playerPrizeField.value;
-        const playerPrize = parseInt(playerPrizeString);
-        const playerExpenses = noOfPlayers * playerPrize;
-        document.getElementById('player-expenses').innerText = playerExpenses;    
+            const playerPrizeString = playerPrizeField.value;
+            const playerPrize = parseInt(playerPrizeString);
+        if (isNaN(playerPrizeString)===false)
+        {
+            const playerExpenses = noOfPlayers * playerPrize;
+            document.getElementById('player-expenses').innerText = playerExpenses;    
+        }
+        else {
+            alert('Please Enter a valid input');
+        }
     })
     // total expenses
     document.getElementById('btn-Total-Cal').addEventListener('click', function () {
         const playerPrizeField = document.getElementById('player-prize');
         const playerPrizeString = playerPrizeField.value;
         const playerPrize = parseInt(playerPrizeString);
+        
         const playerExpenses = noOfPlayers * playerPrize; 
-
         const managerPrizeField = document.getElementById('manager-prize');
         const managerPrizeString = managerPrizeField.value;
-        const managerPrize = parseInt(managerPrizeString);
+       
+            const managerPrize = parseInt(managerPrizeString);
+      
+       
 
         const coachPrizeField = document.getElementById('coach-prize');
         const coachPrizeString = coachPrizeField.value;
-        const coachPrize = parseInt(coachPrizeString);
-        console.log(coachPrize, managerPrize);
-        const totalExpenses = playerExpenses + managerPrize + coachPrize;
-        document.getElementById('total-expenses').innerText=totalExpenses;
+       
+            const coachPrize = parseInt(coachPrizeString);
+        if (isNaN(coachPrizeString) === false && isNaN(managerPrizeString)===false) {
+            const totalExpenses = playerExpenses + managerPrize + coachPrize;
+        document.getElementById('total-expenses').innerText=totalExpenses;   
+        }
+        else {
+            alert('Please Enter a valid input');
+        }
+        
     })
 }
