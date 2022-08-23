@@ -8,14 +8,14 @@
 }
 .header-info{
     position: relative;
-    top: -50%;
+    top: -60%;
     padding: 0 400px 0 400px;
 }
 .header-title{
 font-family: 'Berkshire Swash';
 font-style: normal;
 font-weight: 400;
-font-size: 74px;
+font-size: 72px;
 line-height: 94px;
 text-align: center;
 text-transform: capitalize;
@@ -29,5 +29,20 @@ color: #FF5E19;
     position: relative;
     padding-left:1200px;
     top: -110%;
+    
+}
+.player-container{
+    height: 360px;
+
+}
+.player-container ol li{
+    font-size:22px;
+    color:rgb(180, 124, 21);
+    font-weight:700;
+}
+main{
+    background-color: #5a5454;
+    /* height:1300px; */
+    padding:50px 150px;
     
 }
