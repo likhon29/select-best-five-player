@@ -7,6 +7,16 @@ function addPlayerName(player, playerBtn) {
     li.innerText = playerName;
     const list = playerList.querySelectorAll("li");
     let noOfPlayers = list.length;
+    const noOfPlayerField = document.getElementById('player-count');
+    const noOfPlayerString = noOfPlayerField.innerText;
+    const noOfPlayer = parseInt(noOfPlayerString);
+    let count = 0;
+    count = noOfPlayer + 1;
+    if (count > 5) {
+        count = 5;
+    }
+    noOfPlayerField.innerText = count;
+   
     if (noOfPlayers < 5) {
         document.getElementById('best-five').appendChild(li);
         document.getElementById(playerBtn).setAttribute('disabled','');
@@ -14,6 +24,7 @@ function addPlayerName(player, playerBtn) {
     else{
         alert('Ops!!! You have already selected best-five');
     }
+    budgetCalculator(count);
 }
 
 // function call for Messi
@@ -61,3 +72,30 @@ document.getElementById('btn-Renato').addEventListener('click', function () {
     addPlayerName('pName-Renato','btn-Renato');
 })
 
+
+function budgetCalculator(noOfPlayers) {
+    document.getElementById('btn-Cal').addEventListener('click', function () {
+        const playerPrizeField = document.getElementById('player-prize');
+        const playerPrizeString = playerPrizeField.value;
+        const playerPrize = parseInt(playerPrizeString);
+        const playerExpenses = noOfPlayers * playerPrize;
+        document.getElementById('player-expenses').innerText = playerExpenses;    
+    })
+    document.getElementById('btn-Total-Cal').addEventListener('click', function () {
+        const playerPrizeField = document.getElementById('player-prize');
+        const playerPrizeString = playerPrizeField.value;
+        const playerPrize = parseInt(playerPrizeString);
+        const playerExpenses = noOfPlayers * playerPrize; 
+        
+        const managerPrizeField = document.getElementById('manager-prize');
+        const managerPrizeString = managerPrizeField.value;
+        const managerPrize = parseInt(managerPrizeString);
+
+        const coachPrizeField = document.getElementById('coach-prize');
+        const coachPrizeString = coachPrizeField.value;
+        const coachPrize = parseInt(coachPrizeString);
+        console.log(coachPrize, managerPrize);
+        const totalExpenses = playerExpenses + managerPrize + coachPrize;
+        document.getElementById('total-expenses').innerText=totalExpenses;
+    })
+}
