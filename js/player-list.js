@@ -19,7 +19,9 @@ function addPlayerName(player, playerBtn) {
    
     if (noOfPlayers < 5) {
         document.getElementById('best-five').appendChild(li);
-        document.getElementById(playerBtn).setAttribute('disabled','');
+        document.getElementById(playerBtn).setAttribute('disabled', '');
+        document.getElementById(playerBtn).style.backgroundColor = 'green';
+       
     }
     else{
         alert('Ops!!! You have already selected best-five');
@@ -86,7 +88,7 @@ function budgetCalculator(noOfPlayers) {
         const playerPrizeString = playerPrizeField.value;
         const playerPrize = parseInt(playerPrizeString);
         const playerExpenses = noOfPlayers * playerPrize; 
-        
+
         const managerPrizeField = document.getElementById('manager-prize');
         const managerPrizeString = managerPrizeField.value;
         const managerPrize = parseInt(managerPrizeString);
