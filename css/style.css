@@ -40,7 +40,7 @@ color: #FF5E19;
     color:rgb(180, 124, 21);
     font-weight:700;
 }
-main{
+main,footer{
     background-color: #5a5454;
     /* height:1300px; */
     padding:50px 150px;
