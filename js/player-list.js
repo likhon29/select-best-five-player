@@ -76,6 +76,7 @@ document.getElementById('btn-Renato').addEventListener('click', function () {
 
 
 function budgetCalculator(noOfPlayers) {
+    // player expenses
     document.getElementById('btn-Cal').addEventListener('click', function () {
         const playerPrizeField = document.getElementById('player-prize');
         const playerPrizeString = playerPrizeField.value;
@@ -83,6 +84,7 @@ function budgetCalculator(noOfPlayers) {
         const playerExpenses = noOfPlayers * playerPrize;
         document.getElementById('player-expenses').innerText = playerExpenses;    
     })
+    // total expenses
     document.getElementById('btn-Total-Cal').addEventListener('click', function () {
         const playerPrizeField = document.getElementById('player-prize');
         const playerPrizeString = playerPrizeField.value;
