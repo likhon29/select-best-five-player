@@ -1,0 +1,33 @@
+.header-container
+{ 
+    width: 100%;
+    position: relative;
+    height: 481px;
+    background-color:black;
+    color: white;
+}
+.header-info{
+    position: relative;
+    top: -50%;
+    padding: 0 400px 0 400px;
+}
+.header-title{
+font-family: 'Berkshire Swash';
+font-style: normal;
+font-weight: 400;
+font-size: 74px;
+line-height: 94px;
+text-align: center;
+text-transform: capitalize;
+color: #FF5E19;
+}
+.img-container{
+    position: relative;
+    top: 120px;
+}
+.img-container1{
+    position: relative;
+    padding-left:1200px;
+    top: -110%;
+    
+}
